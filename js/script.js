@@ -58,37 +58,43 @@ else if(playerInput == '3'){
     playerMove = 'nożyce';
   }*/
 
-printMessage('Twój ruch to: ' + playerMove);
 
-if( computerMove == 'kamień' && playerMove == 'papier'){
-    printMessage('Ty wygrywasz!');
+
+function displayResult(argComputerMove, argPlayerMove){
+  
+  printMessage('Twój ruch to: ' + playerMove);
+
+  if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+      printMessage('Ty wygrywasz!');
+    }
+  else if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+      printMessage('Ty wygrywasz!');
+    }
+  else if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+      printMessage('Ty wygrywasz!');
+    }
+
+
+  else if( argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+      printMessage('Przegrywasz!');
   }
-else if( computerMove == 'papier' && playerMove == 'nożyce'){
-    printMessage('Ty wygrywasz!');
+
+  else if( argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+      printMessage('Przegrywasz!');
   }
-else if( computerMove == 'nożyce' && playerMove == 'kamień'){
-    printMessage('Ty wygrywasz!');
+  else if( argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+      printMessage('Przegrywasz!');
   }
 
 
-else if( computerMove == 'nożyce' && playerMove == 'papier'){
-    printMessage('Przegrywasz!');
+  else if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
+      printMessage('Remis!');
+  }
+  else if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
+      printMessage('Remis!');
+  }
+  else if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
+      printMessage('Remis!');
+  }
 }
-
-else if( computerMove == 'kamień' && playerMove == 'nożyce'){
-    printMessage('Przegrywasz!');
-}
-else if( computerMove == 'papier' && playerMove == 'kamień'){
-    printMessage('Przegrywasz!');
-}
-
-
-else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
-    printMessage('Remis!');
-}
-else if( computerMove == 'kamień' && playerMove == 'kamień'){
-    printMessage('Remis!');
-}
-else if( computerMove == 'papier' && playerMove == 'papier'){
-    printMessage('Remis!');
-}
+displayResult(computerMove, playerMove)
