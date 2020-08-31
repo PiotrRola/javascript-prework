@@ -1,4 +1,4 @@
-function playGame (playerInput){ clearMessages
+function playGame (playerInput){ clearMessages ()
   function getMoveName(randomNumber,playerInput){
     if(randomNumber == 1){
       return 'kamień';
